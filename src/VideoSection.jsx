@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from "react";
 
 const VideoSection = () => {
   const videoRefs = useRef([]);
-  const [isLoading, setIsLoading] = useState(Array(6).fill(true));
-  
   const cloudName = "dsusspkru";
-  
   const videos = [
+    `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/faceless_edits.mp4`,
+    `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/MotionGraphics3.mp4`,
+    `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/MotionGraphics4.mp4`,
     `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/Ad.mp4`,
     `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/Gym.mp4`,
     `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/Car.mp4`,
@@ -16,8 +16,13 @@ const VideoSection = () => {
     `https://res.cloudinary.com/${cloudName}/video/upload/q_auto,f_auto,w_800/v1736866154/rahmanVisuals/Movie.mp4`
   ];
 
+  const [isLoading, setIsLoading] = useState(Array(videos.length).fill(true));
+  
+  
+  
+
   const videoTitles = [
-    "Ad Edits", "Gym Edits", "Car Edits",
+    "Faceless Edits","Motion Graphics","Motion Graphics","Ad Edits", "Gym Edits", "Car Edits",
     "Motion Graphics", "Motion Graphics", "Movie Edits"
   ];
 
